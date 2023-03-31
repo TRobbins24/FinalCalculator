@@ -52,25 +52,24 @@
             <br><br>
 
             <div class="row" id="MajorGrade">
-                <label class="col-4 col-form-label">Input Major Assessment Grades:</label> 
-                <div class="col-8">
-                  <input type="number" id="majorGrade" min="1" max="100" v-model="majorGrade" class="form-control">
-                </div>
+              <label class="col-4 col-form-label">Input Major Assessment Grades:</label> 
+              <div class="col-8">
+              <input type="number" class="majorGrade form-control" min="1" max="100" v-model="majorGrade">
               </div>
+          </div>
 
-              <div class="row" id="MinorGrade">
-                <label class="col-4 col-form-label">Input Minor Assessment Grades:</label>
-                <div class="col-8">
-                  <input type="number" id="minorGrade" min="1" max="100" v-model="minorGrade" class="form-control">
-                </div>
-              </div>
-
-              <div class="row" id="IndGrade">
-                <label class="col-4 col-form-label">Input Individual Work Grades:</label>
-                <div class="col-8">
-                  <input type="number" id="indGrade" min="1" max="100" v-model="indGrade" class="form-control">
-                </div>
-              </div>
+          <div class="row" id="MinorGrade">
+            <label class="col-4 col-form-label">Input Minor Assessment Grades:</label>
+            <div class="col-8">
+              <input type="number" class="minorGrade form-control" min="1" max="100" v-model="minorGrade">
+            </div>
+          </div>
+          <div class="row" id="IndGrade">
+            <label class="col-4 col-form-label">Input Individual Work Grades:</label>
+            <div class="col-8">
+              <input type="number" class="indGrade form-control" min="1" max="100" v-model="indGrade">
+            </div>
+          </div>
               
 <br>
             <button type="button" class="form-control btn-primary button" v-on:click="saveData">Enter</button>
