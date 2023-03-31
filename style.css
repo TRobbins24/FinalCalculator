@@ -1,0 +1,18 @@
+body {
+    background-color: lightsteelblue;
+}
+
+#app_title {
+    text-align: center;
+}
+
+input[type=number] {
+    width: 20%;
+}
+
+.button {
+    display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  width: 100px;
+}
