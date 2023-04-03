@@ -30,28 +30,22 @@ const vue_app = Vue.createApp({
 
             var majorGradeElement = document.querySelector(".majorGrade");
             var minorGradeElement = document.querySelector(".minorGrade");
-            var indivGradeSelector = document.querySelector(".indGrade");
+            var indivGradeElement = document.querySelector(".indGrade");
 
 
-
-            if (mWeight <= 0 || mWeight > 100) {
-                document.getElementById("majorWeight").style.borderColor = "red";
-            }
-            if (minWeight <= 0 || minWeight > 100) {
-                document.getElementById("minorWeight").style.borderColor = "red";
-            }
-            if (indWeight <= 0 || indWeight > 100) {
-                document.getElementById("indWeight").style.borderColor = "red";
-            }
-            if (mGrade <= 0 || mGrade > 100) {
-                majorGradeElement.style.borderColor = "red";
-            }
-            if (minGrade <= 0 || minGrade > 100) {
-                minorGradeElement.style.borderColor = "red";
-            }
-            if (iGrade <= 0 || iGrade > 100) {
-                indivGradeSelector.style.borderColor = "red";
-            }
+            //Not above 100 because of extra credit
+           if(majorGradeElement.value < 0){
+                alert("Less than 0 MAJOR");
+                // majorGradeElement.value.style.borderColor = "red";
+           }
+           if(minorGradeElement.value < 0){
+                alert("Less than 0 MINOR");
+                // minorGradeElement.style.borderColor = "red";
+           }
+           if(indivGradeElement.value < 0){
+                alert("Less than 0 IIII");
+                // indivGradeElement.style.borderColor = "red";
+           }
 
 
 
