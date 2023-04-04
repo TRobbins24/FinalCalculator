@@ -43,7 +43,7 @@ const vue_app = Vue.createApp({
                 // minorGradeElement.style.borderColor = "red";
            }
            if(indivGradeElement.value < 0){
-                alert("Less than 0 IIII");
+                alert("Less than 0 INDIV");
                 // indivGradeElement.style.borderColor = "red";
            }
 
@@ -152,7 +152,6 @@ const vue_app = Vue.createApp({
         },
 
         addMajorGrade: function () {
-
             var newGrade = `
             <div class="row" id="MajorGrade">
                 <label class="col-4 col-form-label">Input Major Assessment Grades:</label> 
