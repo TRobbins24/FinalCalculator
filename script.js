@@ -7,7 +7,7 @@ const vue_app = Vue.createApp({
 
     data() {
         return {
-            title: "Genesis Final Grade Calculator",
+            title: "Final Grade Calculator",
             finalTitle: "Final Grade:",
             majorGrade: [],
             minorGrade: [],
@@ -34,21 +34,21 @@ const vue_app = Vue.createApp({
 
 
             //Not above 100 because of extra credit
-           if(majorGradeElement.value < 0){
+            if (majorGradeElement.value < 0) {
                 alert("Less than 0 MAJOR");
                 // majorGradeElement.value.style.borderColor = "red";
-           }
-           if(minorGradeElement.value < 0){
+            }
+            if (minorGradeElement.value < 0) {
                 alert("Less than 0 MINOR");
                 // minorGradeElement.style.borderColor = "red";
-           }
-           if(indivGradeElement.value < 0){
-                alert("Less than 0 INDIV");
+            }
+            if (indivGradeElement.value < 0) {
+                alert("Less than 0 IIII");
                 // indivGradeElement.style.borderColor = "red";
-           }
+            }
 
 
-
+           
 
 
 
@@ -108,29 +108,29 @@ const vue_app = Vue.createApp({
             //Simply gets the average of the two.
             var minorGradeAverage = totalMinorGrade / minorGradeValues.length
 
-                        // ----------------------------------------------------------------------------------------
-                        var indivGradeElements = Array.from(document.querySelectorAll('input.indGrade'));
-                        var indivGradeValues = [];
-                        var totalIndivGrade = 0;
-            
-                        //Loops through every value from the input of indiv Grade Elements and pushes them to the array.
-                        for (var i = 0; i < indivGradeElements.length; i++) {
-                            var indivGradeElement = indivGradeElements[i];
-                            indivGradeValues.push(indivGradeElement.value);
-                            // console.log(indivGradeElement.value);
-                        }
-            
-                        //Loops through each value and adds the total length of how many inputs there are to total indiv grade
-                        for (var j = 0; j < indivGradeValues.length; j++) {
-                            var indivGradeValue = parseFloat(indivGradeValues[j]);
-                            if (isNaN(indivGradeValue)) continue; // <--- checks for any null values 
-                            totalIndivGrade += indivGradeValue;
-                        }
-            
-                        //Simply gets the average of the two.
-                        var indivGradeAverage = totalIndivGrade / indivGradeValues.length
+            // ----------------------------------------------------------------------------------------
+            var indivGradeElements = Array.from(document.querySelectorAll('input.indGrade'));
+            var indivGradeValues = [];
+            var totalIndivGrade = 0;
 
-            
+            //Loops through every value from the input of indiv Grade Elements and pushes them to the array.
+            for (var i = 0; i < indivGradeElements.length; i++) {
+                var indivGradeElement = indivGradeElements[i];
+                indivGradeValues.push(indivGradeElement.value);
+                // console.log(indivGradeElement.value);
+            }
+
+            //Loops through each value and adds the total length of how many inputs there are to total indiv grade
+            for (var j = 0; j < indivGradeValues.length; j++) {
+                var indivGradeValue = parseFloat(indivGradeValues[j]);
+                if (isNaN(indivGradeValue)) continue; // <--- checks for any null values 
+                totalIndivGrade += indivGradeValue;
+            }
+
+            //Simply gets the average of the two.
+            var indivGradeAverage = totalIndivGrade / indivGradeValues.length
+
+
 
 
 
@@ -138,7 +138,7 @@ const vue_app = Vue.createApp({
                 // If all grades are valid, calculate the weighted average
                 this.finalGrade = ((mWeight * majorGradeAverage) + (minWeight * minorGradeAverage) + (indWeight * indivGradeAverage)) / 100;
 
-                    this.finalGrade = this.finalGrade.toFixed(2) + "%";
+                this.finalGrade = this.finalGrade.toFixed(2) + "%";
             } else {
                 console.log("THERE IS AN INVALID THING");
                 // If any of the grades are missing or invalid, return NaN
@@ -152,6 +152,7 @@ const vue_app = Vue.createApp({
         },
 
         addMajorGrade: function () {
+
             var newGrade = `
             <div class="row" id="MajorGrade">
                 <label class="col-4 col-form-label">Input Major Assessment Grades:</label> 
