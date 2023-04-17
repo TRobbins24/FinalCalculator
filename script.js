@@ -136,6 +136,7 @@ const vue_app = Vue.createApp({
 
             if (majorGradeAverage && minorGradeAverage && indivGradeAverage) {
                 // If all grades are valid, calculate the weighted average
+                //  EQUATION: Final Grade = (Category 1 Weight * Category 1 Average Grade) + (Category 1 Weight * Category 1 Average Grade) + (Category 1 Weight * Category 1 Average Grade)
                 this.finalGrade = ((mWeight * majorGradeAverage) + (minWeight * minorGradeAverage) + (indWeight * indivGradeAverage)) / 100;
 
                 this.finalGrade = this.finalGrade.toFixed(2) + "%";
@@ -201,4 +202,3 @@ const vue_app = Vue.createApp({
 })
 
 vue_app.mount("#vue_app")
-
